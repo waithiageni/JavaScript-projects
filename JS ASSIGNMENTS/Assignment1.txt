@@ -1,0 +1,9 @@
+              
+                    Undefined vs  Null
+
+•Undefined means a variable has been declared but has not yet been assigned a value.
+•Null is an assignment value, it can be assigned to variable as a representation of no value.
+•Undefined and null are two distinct types:undefined is a type itself(undefined) while null is an          object.
+•Unassigned variables are initialized by JS  with a default value of undefined 
+•JS never sets a value to null ,that must be done prommatically.
+

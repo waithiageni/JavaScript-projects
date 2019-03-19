@@ -1,0 +1,15 @@
+
+		WHAT IS DECLARATION, DEFINITION & INITIALIZATION
+
+1.   Declaration is registering a variable using a given name within the corresponding scope.
+     For example; var x;  
+     Whereby, x is the variable registered.
+2.   Definition is the assignment of a  specified value to the variable
+     For example; var x = 2
+     Whereby, 2 is the value assigned to variable x.
+3.   Initialization is the specification of the initial value to be stored in an object, 
+     which is not necessarily the same as the first time you explicitly assign a value to it.
+ 
+
+
+
