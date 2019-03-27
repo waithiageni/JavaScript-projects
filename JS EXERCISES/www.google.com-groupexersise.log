@@ -1,0 +1,85 @@
+newtab?ie=UTF-8:8 SW registered
+var name  = prompt('what is your name?')
+alert('your name is ' + name);
+undefined
+var name = prompt('what is your name')
+alert('your name is ' + name)
+undefined
+marks>=80 ? console.log('PASS') :
+console.log('FAIL');
+VM143:1 Uncaught ReferenceError: marks is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM143:1
+mark = 84;
+84
+marks>=80 ? console.log('PASS') :
+console.log('FAIL');
+VM181:1 Uncaught ReferenceError: marks is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM181:1
+var marks = 84;
+undefined
+marks>=80 ? console.log('PASS') :
+console.log('FAIL');
+VM201:1 PASS
+undefined
+marks>=80 ? console.log('PASS') :
+console.log('FAIL');
+VM236:1 PASS
+undefined
+var marks = 78;
+undefined
+marks>=80 ? console.log('PASS') :
+console.log('FAIL');
+VM266:2 FAIL
+undefined
+ 
+undefined
+marks >= 80 || clearedfees
+VM300:1 Uncaught ReferenceError: clearedfees is not defined
+    at <anonymous>:1:16
+(anonymous) @ VM300:1
+var marks = 84
+undefined
+var clearedfees = true;
+undefined
+marks >= 80 && clearedfees
+true
+var clearedfees = false;
+undefined
+marks >= 80 || clearedfees
+true
+marks >= 80 && cleared fee 
+VM442:1 Uncaught SyntaxError: Unexpected identifier
+var irene=({name:"irene" , age:23 , marks:895})
+undefined
+if (marks>=80){
+console.log('pass');
+}
+else{
+console.log('fail');
+}
+VM753:2 pass
+undefined
+var name ="irene";
+undefined
+var name ="irene";
+var name ="brianna";
+var name ="mary";
+undefined
+var obj1 = {}
+undefined
+var obj2 = { name: 'lovelace', subject:'JS'}
+undefined
+var obj3n = { age: 40 }
+undefined
+obj1
+{}
+obj2
+{name: "lovelace", subject: "JS"}
+obj1.name
+undefined
+obj2.name
+"lovelace"
+obj2.subject
+"JS"
