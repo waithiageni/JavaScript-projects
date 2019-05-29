@@ -1,0 +1,112 @@
+class Mkulima {
+  
+  constructor() {
+    this.farms = [];
+    this.vendors = [];
+    this.products = [];
+    this.orders = [];
+  }
+  addFarm(farmId,name,farmer,phoneNo,address){
+    this.farms.push(farmId);
+    this.farms.push(name);
+    this.farms.push(phoneNo);
+    this.farms.push(address);
+  }
+  removeFarm(farmId){
+    if (this.farms[0]===farmId){
+      this.farms=[];
+    }
+  }
+  updateFarm(farmId,name,farmer,phoneNo,address){
+    this.farms.push(farmId);
+    this.farms.push(name);
+    this.farms.push(phoneNo);
+    this.farms.push(address);
+  }
+  getFarm(farmId){
+    if (this.farms[0]===farmId){
+      console.log(this.farms)
+    }
+    else{
+      console.log("The id doesn't appear")
+    }
+  }
+  addVendor(vendorId,vendorName,phoneNumber){
+    this.vendors.push(vendorId);
+    this.vendors.push(vendorName);
+    this.vendors.push(phoneNumber);
+    
+  }
+  removeVendor(vendorId){
+    if (this.vendors[0]===vendorId){
+      this.vendors=[];
+    }
+  }
+  updateVendor(vendorId,vendorName,phoneNumber){
+    this.vendors.push(vendorId);
+    this.vendors.push(vendorName);
+    this.vendors.push(phoneNumber);
+  }
+  getVendor(vendorId){
+    if(this.vendors[0]===vendorId){
+      console.log(this.vendors)
+    }
+    else{
+      console.log("vendor Id not available")
+    }
+  }
+  addProduct(productId,productName,productPrice){
+    this.products.push(productId);
+    this.products.push(productName);
+    this.products.push(productPrice);
+  }
+  removeProduct(productId){
+    if(this.products[0]===productId){
+      this.products=[];
+    }
+  }
+  updateProduct(productId,productName,productPrice){
+    this.products.push(productId);
+    this.products.push(productName);
+    this.products.push(productPrice);
+  }
+  getProduct(productId){
+    if(this.products[0]===productId){
+      console.log(this.products)
+    }
+    else{
+      console.log("product Id not available")
+    }
+  }
+  printProducts(){
+    var priceList=[];
+    var obj={};
+    obj [this.products[1]]=this.products[2];
+    console.log(obj);
+  }
+
+}
+let shamba = new Mkulima();
+shamba.addFarm("7","Irene","Tomatoes","0717995920","3600");
+shamba.removeFarm("7");
+shamba.getFarm("7");
+shamba.updateFarm("8","Irene","Tomatoes","0717995920","3600");
+shamba.getFarm("8");
+
+
+let shambaVendor = new Mkulima();
+shambaVendor.addVendor("77","Brianna","0702045847");
+shambaVendor.removeVendor("77");
+shambaVendor.getVendor("77")
+shambaVendor.updateVendor("78","Brianna","0702045847");
+shambaVendor.getVendor("78");
+
+
+let shambaProduct = new Mkulima();
+shambaProduct.addProduct("32925499","Coffee","700");
+shambaProduct.removeProduct("32925499");
+shambaProduct.getProduct("32925499")
+shambaProduct.updateProduct("32925498","Coffee","700");
+shambaProduct.getProduct("32925498");
+shambaProduct.printProducts();
+

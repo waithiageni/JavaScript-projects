@@ -1,0 +1,131 @@
+class MumMboga {
+  
+  constructor() {
+    this.products = [];
+    this.carts = [];
+    this.orders = [];
+    this.customers  = [];
+  }
+  addProduct(productId,name,price,quantity){
+    this.products.push(productId);
+    this.products.push(name);
+    this.products.push(price);
+    this.products.push(quantity);
+    
+  }
+  
+  removeProduct(productId){
+    if(this.products[0]===productId){
+      this.products=[];
+    }
+  }
+  
+  updateProduct(productId,name,price,quantity){
+    this.products.push(productId);
+    this.products.push(name);
+    this.products.push(price);
+    this.products.push(quantity);
+  }
+  
+  getProduct(productId){
+   if(this.products[0]===productId){
+     console.log(this.products)
+   } 
+    
+  }
+
+  addCustomer(customerId,name,email,address){
+    this.customers.push(customerId);
+    this.customers.push(name);
+    this.customers.push(email);
+    this.customers.push(address);
+  }
+  removeCustomer(customerId){
+    if(this.customers[0]===customerId){
+      this.customers=[];
+    }
+  }
+  updateCustomer(customerId,name,email,address){
+    this.customers.push(customerId);
+    this.customers.push(name);
+    this.customers.push(email);
+    this.customers.push(address);
+  }
+  getCustomer(customerId){
+    if(this.customers[0]===customerId){
+     console.log(this.customers)
+   } 
+  }
+  
+    getProductCatalog(){
+    var catalog=[];
+    var object1={};
+    var object2={};
+    var quantity=[3];
+    object1[this.products[1]]=this.products[3];
+    object2[this.products[1]]=this.products[2];
+    console.log(object1);
+    console.log(object2);
+  }
+  addToCart(cartId,product,orderQuantity,customerId){
+    this.carts.push(cartId);
+    this.carts.push(product);
+    this.carts.push(orderQuantity);
+    this.carts.push(customerId);
+  }
+  removeFromCart(productId){
+    if(this.carts[1]===productId){
+      this.carts=[];
+    }
+  }
+  getFromCart(productId){
+    if(this.carts[1]===productId){
+      console.log(this.carts);
+    }
+    else{
+      console.log("product is not available");
+    }
+  }
+  createOrder(orderId,cartId){
+    this.orders.push(orderId);
+    this.orders.push(cartId);
+  }
+  cancelOrder(orderId){
+    if (this.orders[0]===orderId){
+      this.orders=[];
+    }
+    console.log(this.orders);
+  }
+  getOrder(orderId){
+    if(this.orders[0]===orderId){
+      console.log(this.orders);
+    }
+    else{
+      console.log("Your order has been cancelled");
+    }
+  }
+}
+let kiosk = new MumMboga();
+kiosk.addProduct(78,"Cabbage",80,2);
+kiosk.removeProduct(78);
+kiosk.getProduct(78);
+kiosk.updateProduct(79,"Cabbage",80,2);
+kiosk.getProduct(79);
+kiosk.getProductCatalog();
+
+let customerInfo = new MumMboga();
+customerInfo.addCustomer(32925499,"Irene","irene@gmail.com",3600);
+customerInfo.removeCustomer(32925499);
+customerInfo.updateCustomer(32925498,"Irene","irene@gmail.com",3600);
+customerInfo.getCustomer(32925498);
+
+let kioskCart = new MumMboga();
+kioskCart.addToCart(31,"mangoes",200,32925499);
+kioskCart.removeFromCart("mangoes");
+kioskCart.getFromCart("mangoes")
+
+let kioskOrder= new MumMboga();
+kioskOrder.createOrder(5,31);
+kioskOrder.cancelOrder(0);
+kioskOrder.getOrder(0);
+

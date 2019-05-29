@@ -1,0 +1,13 @@
+=>JavaScript can be used with any browser and also be used to write server-side code using node.js.
+=>JavaScript uses certain functions to print out the code information i.e("console.log" or "alert),for example:console.log("My name is Nyambura") to print out My name is Nyambura.
+=>JavaScript uses cameCase to push words together e.g(getName),the first word starts with lowercase and the second starts with an uppercase.
+	
+	   Variables and Types
+=>Variable means anything that vary.JS has variables that carry data value and the variables are mutable(changeable).
+=>Variables are assigned a value using(=)sign e.g
+   Var number = 1; //the variable type is a number
+   Var string = "Hello"//the variable type is a string ("")
+   Var boolean = true;//the variable type is boolean with (true or false)
+		   
+=>There are two other types in JS:
+  Var 

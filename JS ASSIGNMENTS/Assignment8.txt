@@ -7,9 +7,12 @@ years: 20
 
 };
 
-let{name:firstname,years,isStudent="false"}=user;
+let{name:firstname,years:age,isStudent="false"}=user;
+
 console.log(firstname)
+
 console.log(years)
+
 console.log(isStudent)
 
 2.
@@ -19,6 +22,6 @@ let ask=(question, yes, no)=> {
 }
 ask(
   "Do you agree?",
-  function() { alert("You agreed."); },
-  function() { alert("You canceled the execution."); }
+  ()=> alert("You agreed."),
+  ()=> alert("You canceled the execution.")
 ); 
