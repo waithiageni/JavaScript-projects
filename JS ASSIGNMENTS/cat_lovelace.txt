@@ -1,0 +1,162 @@
+class Mkulima {
+  
+  constructor() {
+    this.farms = [];
+    this.vendors = [];
+    this.products = [];
+    this.orders = [];
+  }
+
+  addFarm(farmId, name, farmer, phone, address){
+    var farm = {farmId:farmId,name:name,farmer:farmer,phone:phone,address:address}
+    
+    this.farms.push(farm);
+  
+  }
+  
+  removeFarm(farmId){
+    var farm =this.getFarm(farmId)
+    var index = this.farms.indexOf(farm)
+    this.farms.splice(index,1)
+   }
+  
+  getFarm(farmId){
+    for (var f =0; f<this.farms.length; f++){
+      var farm = this.farms[f]
+      if (farm.id===farmId){
+        
+        return farm
+      }
+      
+    }
+  }
+  
+    updateFarm(farmId, name, farmer, phone, address){
+    var myFarm = this.farms
+    var objIndex = myFarm.findIndex(obj=>obj.id==farmId);
+    myFarm[objIndex].farmId=farmId
+    myFarm[objIndex].name=name
+    myFarm[objIndex].farmer=farmer
+    myFarm[objIndex].phone=phone
+    myFarm[objIndex].address=address
+     
+    return myFarm
+  }
+  
+  
+   addVendor(vendorId, name, phone){
+    var vendor = {
+      vendorId:vendorId,
+      name:name,
+      phone:phone
+
+    }
+    this.vendors.push(vendor);
+  
+  }
+  
+  removeVendor(vendorId){
+    var vendor =this.getVendor(vendorId)
+    var index = this.vendors.indexOf(vendor)
+    this.vendors.splice(index,1)
+  }
+  
+    getVendor(vendorId){
+    for (var v =0; v<this.vendors.length; v++){
+      var vendor = this.vendors[v]
+      if (vendor.id===vendorId){
+        return vendor
+      }
+      
+    }
+  }
+  
+  updateVendor(vendorId, name, phone){
+    var myVendor = this.vendors
+    var objIndex = myVendor.findIndex(obj => obj.id == vendorId);
+    myVendor[objIndex].vendorId = vendorId
+    myVendor[objIndex].name = name
+    myVendor[objIndex].phone = phone
+    
+    return myVendor
+  }
+  
+   addProduct(productId, name, price){
+   var product ={
+     productId:productId,
+     name:name,
+     price:price
+   }
+   this.products.push(product)
+  
+   }
+  
+  removeProduct(productId){
+    var product =this.getProduct(productId)
+    var index = this.products.indexOf(product)
+    this.products.splice(index,1)
+  }
+  
+  getProduct(productId){
+    for (var p =0; p<this.products.length; p++){
+      var product = this.products[p]
+      if (product.id===productId){
+        return vendor
+      }
+      
+    }
+  }
+  
+  updateProduct(productId, name, price){
+    var myProduct = this.products
+    var objIndex = myProduct.findIndex(obj => obj.id == productId);
+    myProduct[objIndex].productId = productId
+    myProduct[objIndex].name = name
+    myProduct[objIndex].price = price
+    
+    return myProduct
+  }
+  
+  
+}
+
+var mkulima = new Mkulima ()
+
+mkulima.addFarm(1,"Coffee Ranch", "Irene Nyambura", +254713250500, "Murang'a")
+console.log(mkulima.farms)
+
+console.log(mkulima.removeFarm(1))
+ console.log(mkulima.farms)
+mkulima.getFarm(1)
+
+mkulima.updateFarm(1,"Tea Ranch","Brianna Mary", +254712250500, "Thika")
+console.log(mkulima.farms)
+mkulima.getFarm(1)
+
+mkulima.addVendor(32935166,"Jane", +254717665544)
+console.log(mkulima.vendors)
+
+console.log(mkulima.removeVendor(32935166))
+console.log(mkulima.vendors)
+mkulima.getVendor(32935166)
+
+
+mkulima.updateVendor(32935166,"Mary", +254717665544)
+console.log(mkulima.vendors)
+mkulima.getFarm(32935166)
+
+
+mkulima.addProduct(31, "Cherry", 200)
+console.log(mkulima.products)
+
+
+console.log(mkulima.removeProduct(31))
+console.log(mkulima.Produt)
+mkulima.getVendor(31)
+
+
+mkulima.updateProduct(31,"Grapes",300)
+console.log(mkulima.products)
+mkulima.getProduct(31)
+
+

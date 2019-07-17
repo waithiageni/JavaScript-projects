@@ -10,4 +10,7 @@
    Var boolean = true;//the variable type is boolean with (true or false)
 		   
 =>There are two other types in JS:
-  Var 
+  Var myArray=[];
+  Var myObject={};
+  Var undefined; //when the variable is used without first givin it a value it equals to undefined
+  Var null = null; //it is used when the variable should be marked as empty

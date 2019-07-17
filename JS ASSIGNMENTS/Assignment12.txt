@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Greens Kiosk</title>
+</head>
+<body>
+  <h1 id="title">Welcome to Greens Kiosk</h1>
+  <p>We sell fruits and vegetables</p>
+  
+  <h3 id="one">Fruits</h3>
+  <div class="my_cont">
+  
+  <button class="collapse">SHOW FRUITS</button> 
+  <ul id="fruList">
+  <button onclick="myCollapse()">SAVE FRUITS</button>
+    
+    <li>Mangoes</li>
+    <li>Bananas</li>
+    <li>Water Melons</li>
+  </ul>
+  </div>
+      
+  <h3 id="two">Vegetables</h3>  
+  <div class="my_cont">
+
+   <button class="collapse">SHOW VEGETABLES</button> 
+  <ul id="vegList">
+  <button onclick="myCollapse()">SAVE VEGETABLES</button> 
+    
+    <li>Onions</li>
+    <li>Tomatoes</li>
+    <li>Kales</li>
+  </ul>
+</body>
+</html>
+
+<Script>
+
+var colorChange = ()=>{
+  var change = document.getElementById("title");
+  change.style.color=change.style.color==="green"?"silver":"green"
+}
+setInterval(colorChange,1000);
+
+var c = document.getElementsByClassName("collapse");
+var p;
+
+  for (p = 0; p < c.length; p++) {
+    c[p].addEventListener("click", function() {
+      this.classList.toggle("active");
+    
+    var items = this.nextElementSibling;
+      if (items.style.display === "block") {
+        items.style.display = "none";
+      }
+      else {
+      items.style.display = "block";
+    }
+  });
+}
+
+</Script>
+

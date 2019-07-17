@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  
+  <h3>Finding HTML Element by id</h3>
+  
+  <p id="para1">Hello Genius</p>
+  
+  <p>*This is a demonstration of getElementById*</p>
+  
+  <p id="trial"></p>
+  
+  <h3>Getting Element by tagName </h3>
+  
+  <p id="para2">Hello there</p>
+  
+  <p>*This is a demostration of getElementsByTagName</p>
+  
+  <p id="trial2"></p>
+  
+</body>
+</html>
+<script>
+  var para = document.getElementById("para1")
+  document.getElementById("trial").innerHTML=
+   "The text from para1 paragraph is" + " "+ para.innerHTML;
+
+  var para = document.getElementsByTagName("p");
+  document.getElementById("trial2").innerHTML=
+   "The text form para2 paragraph index(0) is:"+" "+para[0].innerHTML
+</script>
+
+

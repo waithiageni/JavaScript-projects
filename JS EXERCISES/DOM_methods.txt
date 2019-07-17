@@ -1,0 +1,15 @@
+<!DOCTYPE Html>
+<html>
+<body>
+
+  <h2>Getting Element by (innerHTML)</h2>
+  <p id="para"></p>
+  <script>
+     <document.getElementById("demo").innerHTML="My name is Irene"
+  </script>
+The easiest way to get an element in HTML is by using it's id.
+The above example getElement is the method used to get the id="para" which is the element inside <p>
+innerHTML is used to get the content inside the Element
+innerHTML can either be used to get or change the content of the HTML elements
+</body>
+</html>
